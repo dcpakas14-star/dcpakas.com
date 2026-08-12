@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DC PAKAS — Artista, música e EP Plano B.">
+<title>DC PAKAS | PLANO B</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#080808;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 40%, #252525 0%, #0b0b0b 45%, #050505 100%);
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,transparent 49%,rgba(255,255,255,.04) 50%,transparent 51%),
+    linear-gradient(0deg,transparent 49%,rgba(255,255,255,.03) 50%,transparent 51%);
+  background-size:80px 80px;
+  opacity:.25;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:30px;
+}
+
+.logo{
+  font-size:clamp(42px,10vw,100px);
+  font-weight:900;
+  letter-spacing:8px;
+  margin-bottom:12px;
+}
+
+.subtitle{
+  color:#aaa;
+  letter-spacing:5px;
+  font-size:14px;
+  text-transform:uppercase;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:35px;
+  padding:10px 20px;
+  border:1px solid #555;
+  font-size:12px;
+  letter-spacing:3px;
+}
+
+.scroll{
+  margin-top:70px;
+  font-size:11px;
+  color:#777;
+  letter-spacing:3px;
+}
+
+section{
+  padding:90px 7%;
+}
+
+.section-title{
+  font-size:clamp(32px,6vw,60px);
+  margin-bottom:15px;
+  font-weight:900;
+}
+
+.section-text{
+  color:#999;
+  max-width:650px;
+  line-height:1.7;
+}
+
+.about{
+  background:#0d0d0d;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-box{
+  border-left:3px solid #fff;
+  padding-left:25px;
+}
+
+.ep{
+  background:#080808;
+}
+
+.ep-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:35px;
+}
+
+.ep-name{
+  font-size:clamp(40px,8vw,85px);
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.tracks{
+  display:grid;
+  gap:12px;
+}
+
+.track{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px;
+  border:1px solid #292929;
+  background:#101010;
+  transition:.3s;
+}
+
+.track:hover{
+  border-color:#777;
+  transform:translateX(5px);
+}
+
+.track-number{
+  color:#777;
+  width:40px;
+}
+
+.track-name{
+  flex:1;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+.play{
+  border:1px solid #555;
+  padding:8px 14px;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+.cta{
+  text-align:center;
+  background:#111;
+}
+
+.cta h2{
+  font-size:clamp(35px,7vw,75px);
+  margin-bottom:20px;
+}
+
+.button{
+  display:inline-block;
+  margin-top:25px;
+  padding:16px 30px;
+  border:1px solid #fff;
+  font-weight:bold;
+  letter-spacing:2px;
+  transition:.3s;
+}
+
+.button:hover{
+  background:#fff;
+  color:#000;
+}
+
+.social{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:35px;
+}
+
+.social a{
+  color:#aaa;
+  font-size:13px;
+  letter-spacing:2px;
+}
+
+footer{
+  padding:35px 20px;
+  text-align:center;
+  background:#050505;
+  color:#555;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+@media(max-width:700px){
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:70px 6%;
+  }
+
+  .ep-header{
+    display:block;
+  }
+
+  .track{
+    padding:18px 14px;
+  }
+
+  .play{
+    padding:7px 9px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="logo">DC PAKAS</div>
+    <div class="subtitle">Artista • Música • Cultura</div>
+
+    <div class="badge">PLANO B — EP</div>
+
+    <div class="scroll">SCROLL PARA ENTRAR</div>
+  </div>
+</header>
+
+<section class="about" id="sobre">
+  <div class="about-grid">
+
+    <div>
+      <div class="section-title">QUEM É<br>DC PAKAS?</div>
+      <p class="section-text">
+        DC PAKAS é um artista que transforma vivências, ambição
+        e realidade em música. Uma identidade própria, uma visão
+        diferente e uma caminhada sem depender de um Plano B.
+      </p>
+    </div>
+
+    <div class="about-box">
+      <p class="section-text">
+        “PLANO B” representa a estratégia, a luta e a vontade de
+        continuar quando ninguém acredita. Cada faixa conta uma
+        parte dessa caminhada.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="ep" id="musica">
+
+  <div class="ep-header">
+    <div>
+      <div class="subtitle">NOVO PROJETO</div>
+      <div class="ep-name">PLANO B</div>
+    </div>
+
+    <div class="section-text">
+      6 faixas • DC PAKAS
+    </div>
+  </div>
+
+  <div class="tracks">
+
+    <div class="track">
+      <span class="track-number">01</span>
+      <span class="track-name">QUEM SOU</span>
+      <a href="#" class="play">OUVIR</a>
+    </div>
+
+    <div class="track">
+      <span class="track-number">02</span>
+      <span class="track-name">EGO</span>
+      <a href="#" class="play">OUVIR</a>
+    </div>
+
+    <div class="track">
+      <span class="track-number">03</span>
+      <span class="track-name">EH EH</span>
+      <a href="#" class="play">OUVIR</a>
+    </div>
+
+    <div class="track">
+      <span class="track-number">04</span>
+      <span class="track-name">ERREI</span>
+      <a href="#" class="play">OUVIR</a>
+    </div>
+
+    <div class="track">
+      <span class="track-number">05</span>
+      <span class="track-name">BIP BIP</span>
+      <a href="#" class="play">OUVIR</a>
+    </div>
+
+    <div class="track">
+      <span class="track-number">06</span>
+      <span class="track-name">NOSSO</span>
+      <a href="#" class="play">OUVIR</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+
+  <h2>PLANO B<br>JÁ DISPONÍVEL.</h2>
+
+  <p class="section-text" style="margin:auto;">
+    Ouve o projeto, acompanha a caminhada e faz parte
+    da nova fase de DC PAKAS.
+  </p>
+
+  <a href="#musica" class="button">OUVIR O EP</a>
+
+  <div class="social">
+    <a href="#">INSTAGRAM</a>
+    <a href="#">YOUTUBE</a>
+    <a href="#">SPOTIFY</a>
+    <a href="#">TIKTOK</a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 DC PAKAS — TODOS OS DIREITOS RESERVADOS
+  <br><br>
+  dcpakas.com
+</footer>
+
+</body>
+</html>
